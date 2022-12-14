@@ -19,6 +19,9 @@
         <a href="#clientes">Clientes</a>
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
+        @auth
+            <a href="{{ route('dashboard') }}">Panel de Control</a>
+        @endauth
         <img src="{{ asset("/img/LOGIÑO.png") }}" width="60" id="imagen">
     </nav>
     <section class="textos-header">
