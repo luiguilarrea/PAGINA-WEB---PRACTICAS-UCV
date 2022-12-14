@@ -17,7 +17,7 @@
         <a href="#fotos">Fotos</a>
         <a href="#clientes">Clientes</a>
         <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
+        {{-- <a href="#contacto">Contacto</a> --}}
         @auth
             <a href="{{ route('dashboard') }}">Panel de Control</a>
             <form method="POST" action="{{ route('logout') }}" x-data>
