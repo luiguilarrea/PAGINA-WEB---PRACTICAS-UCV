@@ -30,6 +30,7 @@
             </form>
         @else
             <a href="{{ route('login') }}">Iniciar sesión</a>
+            <a href="{{ route('register') }}">Registrarse</a>
         @endauth
         <img src="{{ asset("/img/LOGIÑO.png") }}" width="60" id="imagen">
     </nav>
