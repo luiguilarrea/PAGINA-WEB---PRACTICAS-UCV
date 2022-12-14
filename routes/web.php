@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Text;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,11 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+
+        $texts = Text::all();
+        
+        $mision = $texts->where('name', 'Mision')->first();
+
+        return view('dashboard', compact('texts', 'mision'));
     })->name('dashboard');
 });
