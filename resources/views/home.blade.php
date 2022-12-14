@@ -11,8 +11,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-  <header>
-    <nav>
+  <header class="header-home">
+    <nav class="flex justify-end items-center">
         <a href="#inicio">Inicio</a>
         <a href="#quienes-somos">¿Quienes somos?</a>
         <a href="#fotos">Fotos</a>
