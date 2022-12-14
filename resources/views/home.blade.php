@@ -13,14 +13,23 @@
 <body>
   <header class="header-home">
     <nav class="flex justify-end items-center">
-        <a href="#inicio">Inicio</a>
-        <a href="#quienes-somos">¿Quienes somos?</a>
+        <a href="#quienes-somos" style="margin-left: 10px;">¿Quienes somos?</a>
         <a href="#fotos">Fotos</a>
         <a href="#clientes">Clientes</a>
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
         @auth
             <a href="{{ route('dashboard') }}">Panel de Control</a>
+            <form method="POST" action="{{ route('logout') }}" x-data>
+                @csrf
+
+                <a style="color:rgba(255, 255, 255, 0.836); margin-right: 10px;" href="{{ route('logout') }}"
+                            @click.prevent="$root.submit();">
+                    {{ __('Cerrar sesión') }}
+                </a>
+            </form>
+        @else
+            <a href="{{ route('login') }}">Iniciar sesión</a>
         @endauth
         <img src="{{ asset("/img/LOGIÑO.png") }}" width="60" id="imagen">
     </nav>
